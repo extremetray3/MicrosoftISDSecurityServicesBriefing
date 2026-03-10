@@ -69,13 +69,15 @@
     btn.setAttribute('aria-label', 'Toggle notes for ' + headingText);
 
     var savedNote = loadNote(pageId, slug);
-    btn.innerHTML = '<span class="notes-icon">' + (savedNote ? '📝' : '✏️') + '</span>'
-      + '<span class="notes-label">' + (savedNote ? 'Notes ✓' : 'Add Notes') + '</span>';
+    var hasContent = !!savedNote;
+    btn.innerHTML = '<span class="notes-icon">' + (hasContent ? '📝' : '✏️') + '</span>'
+      + '<span class="notes-label">' + (hasContent ? 'Notes ✓' : 'Add Notes') + '</span>';
 
-    // Collapsible panel
+    // Collapsible panel — open by default if notes exist
     var panel = document.createElement('div');
     panel.className = 'notes-panel';
-    panel.style.display = 'none';
+    panel.style.display = hasContent ? 'block' : 'none';
+    if (hasContent) { btn.setAttribute('aria-expanded', 'true'); }
 
     var textarea = document.createElement('textarea');
     textarea.className = 'notes-textarea';
@@ -163,24 +165,63 @@
     exportBtn.textContent = 'Export All Notes';
     exportBtn.addEventListener('click', exportAllNotes);
 
-    // Clear button
-    var clearBtn = document.createElement('button');
-    clearBtn.className = 'notes-toolbar-btn notes-clear-btn';
-    clearBtn.type = 'button';
-    clearBtn.textContent = 'Clear This Page';
-    clearBtn.addEventListener('click', function () {
-      if (!confirm('Clear all notes on this page?')) return;
+    // Save Session button
+    var saveSessionBtn = document.createElement('button');
+    saveSessionBtn.className = 'notes-toolbar-btn notes-save-session-btn';
+    saveSessionBtn.type = 'button';
+    saveSessionBtn.textContent = 'Save Session';
+    saveSessionBtn.addEventListener('click', saveSession);
+
+    // Load Session button
+    var loadSessionBtn = document.createElement('button');
+    loadSessionBtn.className = 'notes-toolbar-btn notes-load-session-btn';
+    loadSessionBtn.type = 'button';
+    loadSessionBtn.textContent = 'Load Session';
+    loadSessionBtn.addEventListener('click', loadSession);
+
+    // New Session button (clear everything)
+    var newSessionBtn = document.createElement('button');
+    newSessionBtn.className = 'notes-toolbar-btn notes-clear-btn';
+    newSessionBtn.type = 'button';
+    newSessionBtn.textContent = 'New Session';
+    newSessionBtn.addEventListener('click', function () {
+      if (!confirm('Start a new session? This will clear ALL notes across ALL pages and the customer name.')) return;
+      clearAllNotes();
+      // Reset UI on current page
       var textareas = document.querySelectorAll('.notes-textarea');
       for (var i = 0; i < textareas.length; i++) {
         textareas[i].value = '';
         textareas[i].dispatchEvent(new Event('input'));
       }
+      var panels = document.querySelectorAll('.notes-panel');
+      for (var j = 0; j < panels.length; j++) {
+        panels[j].style.display = 'none';
+      }
+      var toggles = document.querySelectorAll('.notes-toggle');
+      for (var k = 0; k < toggles.length; k++) {
+        toggles[k].setAttribute('aria-expanded', 'false');
+        toggles[k].innerHTML = '<span class="notes-icon">✏️</span><span class="notes-label">Add Notes</span>';
+      }
+      custInput.value = '';
+      setCustomer('');
     });
 
-    toolbar.appendChild(custLabel);
-    toolbar.appendChild(expandBtn);
-    toolbar.appendChild(exportBtn);
-    toolbar.appendChild(clearBtn);
+    // Row 1: customer + session management
+    var row1 = document.createElement('div');
+    row1.className = 'notes-toolbar-row';
+    row1.appendChild(custLabel);
+    row1.appendChild(saveSessionBtn);
+    row1.appendChild(loadSessionBtn);
+    row1.appendChild(newSessionBtn);
+
+    // Row 2: notes controls
+    var row2 = document.createElement('div');
+    row2.className = 'notes-toolbar-row';
+    row2.appendChild(expandBtn);
+    row2.appendChild(exportBtn);
+
+    toolbar.appendChild(row1);
+    toolbar.appendChild(row2);
 
     return toolbar;
   }
@@ -257,6 +298,99 @@
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+  }
+
+  // --- Save session (download JSON backup) ---
+
+  function saveSession() {
+    var data = {};
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf(STORAGE_PREFIX) === 0) {
+          data[k] = localStorage.getItem(k);
+        }
+      }
+      // Include customer name
+      var cust = localStorage.getItem(CUSTOMER_KEY);
+      if (cust) data[CUSTOMER_KEY] = cust;
+    } catch (e) { /* ignore */ }
+
+    if (Object.keys(data).length === 0) {
+      alert('No session data to save.');
+      return;
+    }
+
+    var customer = getCustomer() || 'session';
+    var dateStr = new Date().toISOString().slice(0, 10);
+    var filename = 'session-' + slugify(customer) + '-' + dateStr + '.json';
+    var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // --- Load session (upload JSON backup) ---
+
+  function loadSession() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.addEventListener('change', function () {
+      if (!input.files || !input.files[0]) return;
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        try {
+          var data = JSON.parse(e.target.result);
+          // Validate it looks like our data
+          var validKeys = 0;
+          for (var k in data) {
+            if (k.indexOf(STORAGE_PREFIX) === 0 || k === CUSTOMER_KEY) validKeys++;
+          }
+          if (validKeys === 0) {
+            alert('This file does not contain valid session data.');
+            return;
+          }
+          if (!confirm('Load session? This will replace any current notes.')) return;
+          // Clear existing notes first
+          clearAllNotes();
+          // Load new data
+          for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+              localStorage.setItem(key, data[key]);
+            }
+          }
+          // Reload page to reflect loaded notes
+          location.reload();
+        } catch (err) {
+          alert('Error reading session file.');
+        }
+      };
+      reader.readAsText(input.files[0]);
+    });
+    input.click();
+  }
+
+  // --- Clear all notes across all pages ---
+
+  function clearAllNotes() {
+    try {
+      var keysToRemove = [];
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && (k.indexOf(STORAGE_PREFIX) === 0 || k === CUSTOMER_KEY)) {
+          keysToRemove.push(k);
+        }
+      }
+      for (var j = 0; j < keysToRemove.length; j++) {
+        localStorage.removeItem(keysToRemove[j]);
+      }
+    } catch (e) { /* ignore */ }
   }
 
   // --- Init ---

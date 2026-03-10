@@ -1,12 +1,34 @@
 // ============================================
+// Site-wide customizations
+// ============================================
+
+// Collapse the on-page TOC ("On this page") by default
+.site-nav,
+nav.onThisPage,
+.toc-wrapper {
+  // Just the Docs uses JS-based TOC; collapse via details element
+}
+
+// The actual TOC toggle in Just the Docs uses <details>
+.main-content-wrap .toc-list {
+  // Let the JS handle collapse
+}
+
+// Line under H2 section headers
+.main-content h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+
+// ============================================
 // Notes Panel — Discussion / Decision Capture
 // ============================================
 
 // Toolbar (top bar with customer input + buttons)
 .notes-toolbar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   gap: 0.5rem;
   padding: 0.6rem 0.8rem;
   margin: 1rem 0 1.5rem;
@@ -14,6 +36,13 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px;
   font-size: 0.85rem;
+}
+
+.notes-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .notes-customer-label {
@@ -75,6 +104,26 @@
     color: #f85149;
     border-color: rgba(248, 81, 73, 0.3);
     background: rgba(248, 81, 73, 0.1);
+  }
+}
+
+.notes-save-session-btn {
+  background: rgba(63, 185, 80, 0.12);
+  border-color: rgba(63, 185, 80, 0.3);
+  color: #3fb950;
+
+  &:hover {
+    background: rgba(63, 185, 80, 0.22);
+  }
+}
+
+.notes-load-session-btn {
+  background: rgba(210, 153, 34, 0.12);
+  border-color: rgba(210, 153, 34, 0.3);
+  color: #d29922;
+
+  &:hover {
+    background: rgba(210, 153, 34, 0.22);
   }
 }
 
