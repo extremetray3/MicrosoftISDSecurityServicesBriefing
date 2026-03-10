@@ -2,14 +2,10 @@
 // Site-wide customizations
 // ============================================
 
-// Collapse the on-page TOC ("On this page") by default
-// Just the Docs renders TOC inside a <details> element
-.main-content details.toc-toggle {
-  &:not([open]) summary {
-    // default state
-  }
+// TOC starts collapsed — JS removes 'open' attr; this class prevents flash
+.main-content details.toc-collapsed:not([open]) > *:not(summary) {
+  display: none;
 }
-// Force TOC closed on page load via JS (see head_custom.html)
 
 // Lines under H1 and H2 section headers (light blue, H1 thicker)
 .main-content h1 {
