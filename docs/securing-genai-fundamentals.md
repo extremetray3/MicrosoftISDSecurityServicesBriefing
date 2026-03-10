@@ -98,23 +98,23 @@ Most organizations anchored secure AI using existing security and risk framework
 
 The landscape is shifting to be more concrete and more audit-shaped. Several AI-specific standards and practitioner playbooks have become prominent enough that customers increasingly expect explicit alignment, not just good practices. In particular:
 
-### NIST AI RMF
+#### NIST AI RMF
 
 Has emerged as a widely recognized, AI-specific risk management backbone (practical, flexible, and maps well to how enterprises actually govern and deliver technology).
 
-### ISO AI standards
+#### ISO AI standards
 
 Have increased in visibility for organizations that want a certifiable or audit-ready management-system approach to AI governance and risk.
 
-### Practitioner security taxonomies
+#### Practitioner security taxonomies
 
 For GenAI (and now agentic patterns) have matured, giving security teams and builders a shared checklist of common failure modes.
 
-### Regulatory expectations
+#### Regulatory expectations
 
 Have sharpened, increasing the importance of traceability, oversight, and evidence, especially as AI moves from experimentation into production and higher-impact use.
 
-### OWASP Top 10 for Agentic AI
+#### OWASP Top 10 for Agentic AI
 
 OWASP has published a Top 10 specifically oriented to agentic applications, reflecting the community's view that autonomy introduces new, high-impact risk categories. Organizations should plan early for reporting workflows and evidence in jurisdictions with defined incident reporting timelines.
 
