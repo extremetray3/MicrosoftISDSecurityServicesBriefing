@@ -1,0 +1,43 @@
+title: "Microsoft ISD | AI Security Briefing"
+description: "Securing Generative and Agentic AI — A briefing for enterprise security leaders"
+baseurl: "/MicrosoftISDSecurityServicesBriefing"
+url: ""
+
+theme: just-the-docs
+
+# Aux links (top-right of page)
+aux_links:
+  "View on GitHub":
+    - "https://github.com/extremetray3/MicrosoftISDSecurityServicesBriefing"
+
+# Navigation structure
+nav_order: true
+
+# Enable search
+search_enabled: true
+search.button: true
+
+# Color scheme
+color_scheme: dark
+
+# Footer
+footer_content: "Microsoft ISD | AI Security Briefing. Built with Just the Docs."
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Callouts (for @@note references)
+callouts:
+  note:
+    title: Note
+    color: blue
+  references:
+    title: References
+    color: purple
+  warning:
+    title: Warning
+    color: red
+  important:
+    title: Important
+    color: yellow
