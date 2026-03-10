@@ -44,18 +44,10 @@ The mapping below illustrates how Microsoft platforms and security products can 
 
 ## Technology Mapping
 
-<table class="tech-mapping-table">
-<colgroup>
-  <col style="width: 18%;">
-  <col style="width: 4%;">
-  <col style="width: 38%;">
-  <col style="width: 27%;">
-  <col style="width: 13%;">
-</colgroup>
+<table>
 <thead>
 <tr>
   <th>Product / Service</th>
-  <th></th>
   <th>Controls, Monitors, Integrates with, and/or Reports on</th>
   <th>Functional Capability Mapping</th>
   <th>Typical Owner (AI Eng / Platform / Security / COE)</th>
@@ -64,7 +56,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 <tbody>
 <tr>
   <td>Microsoft Agent 365 (Preview)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:robot" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Control-plane visibility and governance of agent fleets</li>
@@ -82,7 +73,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Entra Agent ID (Preview)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:identification-card" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Identity constructs and governance patterns for agents</li>
@@ -99,7 +89,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Entra ID (Identity &amp; Access)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:key" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Authentication/authorization, conditional access patterns, identity controls for AI apps and tools</li>
@@ -115,7 +104,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Entra ID Governance (access reviews / entitlement patterns)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:clipboard" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Access reviews, approvals, entitlement workflows (where used)</li>
@@ -131,7 +119,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Managed Identities / workload identity patterns (Azure)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:locked" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Reduces secrets-in-code</li>
@@ -148,7 +135,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure OpenAI Service</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:brain" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Enterprise model endpoints with Azure security boundaries</li>
@@ -165,7 +151,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure AI Foundry (incl. evaluation tooling; Preview where applicable)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:factory" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Standardizes build/evaluate/release patterns</li>
@@ -182,7 +167,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure AI Search</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:magnifying-glass-tilted-right" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Retrieval (RAG) enablement</li>
@@ -199,7 +183,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure API Management</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:electric-plug" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Auth, throttling, policy enforcement, governance for AI-facing APIs and tool APIs</li>
@@ -215,7 +198,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure Key Vault</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:locked-with-key" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Secrets/keys/certs lifecycle</li>
@@ -232,7 +214,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure Private Link / VNet Integration</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:link" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Private connectivity patterns that reduce public exposure of AI endpoints and dependencies</li>
@@ -247,7 +228,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure Policy (Policy-as-Code)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:scroll" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Guardrails for Azure configurations</li>
@@ -264,7 +244,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure Resource Graph / tagging &amp; inventory patterns</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:card-file-box" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Asset discovery, inventory hygiene, governance reporting patterns across AI environments</li>
@@ -280,7 +259,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Defender for Cloud</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:shield" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Cloud posture management + threat protection signals for Azure resources supporting AI workloads</li>
@@ -296,7 +274,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Defender Portal "Cloud Security Dashboard" (Preview, where applicable)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:chart-increasing" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Consolidated posture/threat view</li>
@@ -313,7 +290,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Defender XDR</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:crossed-swords" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Unified investigation across endpoint/identity/email/collab/cloud signals</li>
@@ -329,7 +305,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Sentinel</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:satellite-antenna" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>SIEM/SOAR correlation, detections, playbooks</li>
@@ -346,7 +321,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure Monitor + Log Analytics</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:bar-chart" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Collection/analysis of application and infrastructure telemetry</li>
@@ -363,7 +337,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Security Copilot</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:sparkles" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Accelerates triage/investigation/reporting/tasking</li>
@@ -380,7 +353,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Purview Information Protection (labels)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:label" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Classification/labeling for sensitive data</li>
@@ -397,7 +369,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Purview DLP</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:no-entry" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Reduces leakage risk across prompts/outputs/sharing surfaces</li>
@@ -413,7 +384,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Purview Data Security Investigations (Preview, where applicable)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:detective" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Investigation workflows and analytic views for data security signals</li>
@@ -430,7 +400,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Purview Insider Risk Management</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:warning" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Detects risky behaviors and policy violations intersecting AI workflows</li>
@@ -446,7 +415,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Defender for Cloud Apps (CASB)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:cloud" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Visibility/control over SaaS usage</li>
@@ -463,7 +431,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Defender for Identity (where applicable)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:bust-in-silhouette" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Identity threat detection and investigations</li>
@@ -480,7 +447,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>GitHub Advanced Security</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="simple-icons:github" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Code scanning, secret scanning, dependency risk detection</li>
@@ -495,7 +461,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Azure DevOps</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:gear" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Release gating and secure pipelines for AI app components and infrastructure</li>
@@ -511,7 +476,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Defender for DevOps (where used)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:hammer-and-wrench" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Security signals across code-to-cloud pipeline and posture</li>
@@ -527,7 +491,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Power BI / Fabric (where used)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:gem-stone" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Governance dashboards for KPIs, posture trends, exceptions, progress</li>
@@ -542,7 +505,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Microsoft Teams + Planner (operational tooling)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:speech-balloon" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Operationalizes governance decisions into tasks and tracked outcomes</li>
@@ -557,7 +519,6 @@ The mapping below illustrates how Microsoft platforms and security products can 
 </tr>
 <tr>
   <td>Copilot Studio (where applicable)</td>
-  <td style="text-align:center; vertical-align:middle;"><iconify-icon icon="fluent-emoji-flat:artist-palette" width="28" height="28"></iconify-icon></td>
   <td>
     <ul>
       <li>Low-/medium-code agent creation</li>
