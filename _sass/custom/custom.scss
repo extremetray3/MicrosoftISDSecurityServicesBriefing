@@ -3,20 +3,23 @@
 // ============================================
 
 // Collapse the on-page TOC ("On this page") by default
-.site-nav,
-nav.onThisPage,
-.toc-wrapper {
-  // Just the Docs uses JS-based TOC; collapse via details element
+// Just the Docs renders TOC inside a <details> element
+.main-content details.toc-toggle {
+  &:not([open]) summary {
+    // default state
+  }
+}
+// Force TOC closed on page load via JS (see head_custom.html)
+
+// Lines under H1 and H2 section headers (light blue, H1 thicker)
+.main-content h1 {
+  border-bottom: 3px solid #58a6ff;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-// The actual TOC toggle in Just the Docs uses <details>
-.main-content-wrap .toc-list {
-  // Let the JS handle collapse
-}
-
-// Line under H2 section headers
 .main-content h2 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid #58a6ff;
   padding-bottom: 0.35rem;
   margin-bottom: 0.8rem;
 }

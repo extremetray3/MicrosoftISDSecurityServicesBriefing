@@ -1,2 +1,18 @@
+<!-- Collapse on-page TOC by default -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toc = document.querySelector('.main-content details');
+  if (toc && toc.hasAttribute('open')) {
+    toc.removeAttribute('open');
+  }
+  // Also try the nav TOC used in some Just the Docs versions
+  var sideTocs = document.querySelectorAll('details.nav-list-link, details[open].toc-toggle');
+  for (var i = 0; i < sideTocs.length; i++) {
+    // Only collapse on-page TOC, not sidebar nav
+    if (sideTocs[i].closest('.site-nav')) continue;
+    sideTocs[i].removeAttribute('open');
+  }
+});
+</script>
 <!-- Notes Panel: Discussion & Decision Capture -->
 <script src="{{ '/assets/js/notes.js' | relative_url }}" defer></script>

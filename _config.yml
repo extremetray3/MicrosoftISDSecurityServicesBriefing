@@ -27,11 +27,6 @@ footer_content: "Microsoft ISD | AI Security Briefing. Built with Just the Docs.
 back_to_top: true
 back_to_top_text: "Back to top"
 
-# Table of contents — collapsed by default
-toc:
-  enabled: true
-  collapsed: true
-
 # Callouts (for @@note references)
 callouts:
   note:
