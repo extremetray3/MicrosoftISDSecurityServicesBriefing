@@ -4,7 +4,7 @@ layout: default
 nav_order: 3
 ---
 
-# Securing Generative AI on Azure — Fundamentals (Baseline)
+# <iconify-icon icon="fluent-emoji-flat:locked" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Securing Generative AI on Azure — Fundamentals (Baseline)
 {: .no_toc }
 
 Establishing a baseline for securing generative AI solutions — these remain widely deployed and are the foundation that agentic systems build upon.
@@ -19,7 +19,7 @@ Establishing a baseline for securing generative AI solutions — these remain wi
 
 ---
 
-## 1.1 The top security risks
+## <iconify-icon icon="fluent-emoji-flat:warning" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 1.1 The top security risks
 
 Establishing a baseline for generative AI security — these solutions remain widely deployed and are the foundation agentic systems build upon.
 
@@ -49,7 +49,7 @@ AI teams move fast; governance, documentation, and control evidence lag behind, 
 
 ---
 
-## 1.2 Key control themes and frameworks
+## <iconify-icon icon="fluent-emoji-flat:classical-building" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 1.2 Key control themes and frameworks
 
 ### Overview
 
@@ -85,7 +85,7 @@ Ensuring a consistent vocabulary for risk, a repeatable control approach, and de
 
 ---
 
-## 1.2.1 How frameworks have evolved (2022 to 2026)
+## <iconify-icon icon="fluent-emoji-flat:calendar" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 1.2.1 How frameworks have evolved (2022 to 2026)
 
 From policy intent and baseline controls to AI-specific standards and audit-shaped evidence requirements.
 {: .fs-5 .fw-300 }
@@ -120,7 +120,7 @@ OWASP has published a Top 10 specifically oriented to agentic applications, refl
 
 ---
 
-## 1.3 Practical approaches to addressing AI Security
+## <iconify-icon icon="fluent-emoji-flat:hammer-and-wrench" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 1.3 Practical approaches to addressing AI Security
 
 Security patterns that have surfaced in recent Generative AI customer initiatives. Each customer scenario is different, patterns overlap, and other functions are involved as well.
 {: .fs-5 .fw-300 }
@@ -151,7 +151,7 @@ Establish operational visibility: logging and telemetry for prompts, retrieval, 
 
 ---
 
-## 1.4 Looking back as we move forward
+## <iconify-icon icon="fluent-emoji-flat:magnifying-glass-tilted-left" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 1.4 Looking back as we move forward
 
 Many best practices shared above started to become clearer as GenAI moved from experimentation into early production (roughly the 2024/2025 time frame), but they were not always consistently applied — especially when teams viewed security as an impediment rather than an enabler.
 

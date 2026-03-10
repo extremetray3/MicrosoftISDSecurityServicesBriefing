@@ -4,7 +4,7 @@ layout: default
 nav_order: 5
 ---
 
-# Operating Model: Build‑Time to Run‑Time
+# <iconify-icon icon="fluent-emoji-flat:gear" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Operating Model: Build‑Time to Run‑Time
 {: .no_toc }
 
 Agentic AI security is not only a technical problem. Programs stall when they do not define how AI delivery and security operate together.
@@ -19,7 +19,7 @@ Agentic AI security is not only a technical problem. Programs stall when they do
 
 ---
 
-## 3.1 Minimum viable governance (MVG) processes
+## <iconify-icon icon="fluent-emoji-flat:clipboard" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 3.1 Minimum viable governance (MVG) processes
 
 The objective is not bureaucracy; it's scalable control. MVG typically includes:
 
@@ -33,7 +33,7 @@ The objective is not bureaucracy; it's scalable control. MVG typically includes:
 
 ---
 
-## 3.2 Agent‑aware SecOps
+## <iconify-icon icon="fluent-emoji-flat:eyes" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 3.2 Agent‑aware SecOps
 
 SecOps needs:
 
@@ -47,7 +47,7 @@ SecOps needs:
 
 ---
 
-## 3.3 COE Integration with Broader AI Factory
+## <iconify-icon icon="fluent-emoji-flat:handshake" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 3.3 COE Integration with Broader AI Factory
 
 In many AI transformation programs, security cannot succeed as a "project-only" workstream. It needs an operational home that persists across use cases, teams, and releases. That home is typically an **AI Center of Excellence (AI COE)** (sometimes called an AI Factory operating model), which coordinates cross-functional decision-making, standards, platform practices, and scaled enablement across the AI portfolio.
 

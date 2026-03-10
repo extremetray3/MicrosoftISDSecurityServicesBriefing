@@ -4,7 +4,7 @@ layout: default
 nav_order: 4
 ---
 
-# Securing Agentic AI
+# <iconify-icon icon="fluent-emoji-flat:robot" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Securing Agentic AI
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,7 +16,7 @@ nav_order: 4
 
 ---
 
-## 2.1 Why Agentic AI Changes the Security Model
+## <iconify-icon icon="fluent-emoji-flat:high-voltage" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 2.1 Why Agentic AI Changes the Security Model
 
 ### From "answers" to "actions"
 
@@ -52,7 +52,7 @@ This is why agent security is best understood as **governance + identity + obser
 
 ---
 
-## 2.2 The New Risk Landscape
+## <iconify-icon icon="fluent-emoji-flat:world-map" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 2.2 The New Risk Landscape
 
 There are many possible threat taxonomies. The most useful executive view is to group risks into a few practical buckets that map directly to controls and operating model decisions.
 
@@ -104,7 +104,7 @@ As AI systems move into high‑impact domains, organizations will need to respon
 
 ---
 
-## 2.3 What "Good" Looks Like
+## <iconify-icon icon="fluent-emoji-flat:bullseye" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 2.3 What "Good" Looks Like
 
 ### Desired outcomes (North Star)
 
@@ -168,7 +168,7 @@ These principles help translate "secure agentic AI" into implementable architect
 
 ---
 
-## 2.4 Control Primitives That Matter
+## <iconify-icon icon="fluent-emoji-flat:building-construction" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 2.4 Control Primitives That Matter
 
 Many organizations jump to "monitoring" or "red teaming" first. In practice, durable security starts with a small number of control primitives that create enterprise leverage.
 
@@ -268,7 +268,7 @@ Where the impact is irreversible (financial movement, production change, privile
 
 ---
 
-## References
+## <iconify-icon icon="fluent-emoji-flat:link" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> References
 {: .references }
 
 > - [The Real-World Attacks Behind OWASP Agentic AI Top 10](https://www.bleepingcomputer.com/news/security/the-real-world-attacks-behind-owasp-agentic-ai-top-10/)

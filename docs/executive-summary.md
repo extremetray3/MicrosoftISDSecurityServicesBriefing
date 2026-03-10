@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 ---
 
-# Executive Summary
+# <iconify-icon icon="fluent-emoji-flat:memo" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Executive Summary
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,7 +16,7 @@ nav_order: 2
 
 ---
 
-## Overview
+## <iconify-icon icon="fluent-emoji-flat:telescope" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Overview
 
 ### The Shift from Generative to Agentic AI
 
@@ -48,7 +48,7 @@ This briefing covers:
 
 ---
 
-## References
+## <iconify-icon icon="fluent-emoji-flat:link" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> References
 {: .references }
 
 > - Not intended as a technical deep dive. See [Appendix]({{ site.baseurl }}/docs/appendix) for Microsoft AI Security Technology Mapping.

@@ -9,15 +9,25 @@
 
 // Lines under H1 and H2 section headers (light blue, H1 thicker)
 .main-content h1 {
-  border-bottom: 3px solid #58a6ff;
+  border-bottom: 3px solid #0078d4;
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
 }
 
 .main-content h2 {
-  border-bottom: 2px solid #58a6ff;
+  border-bottom: 2px solid #0078d4;
   padding-bottom: 0.35rem;
   margin-bottom: 0.8rem;
+}
+
+// Technology Mapping Table — wider capability column
+.tech-mapping-table {
+  width: 100%;
+  table-layout: fixed;
+
+  td:first-child {
+    font-weight: 600;
+  }
 }
 
 // ============================================
@@ -64,7 +74,7 @@
 
   &:focus {
     outline: none;
-    border-color: #58a6ff;
+    border-color: #0078d4;
     box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
   }
 }
@@ -88,7 +98,7 @@
 .notes-export-btn {
   background: rgba(88, 166, 255, 0.15);
   border-color: rgba(88, 166, 255, 0.3);
-  color: #58a6ff;
+  color: #0078d4;
 
   &:hover {
     background: rgba(88, 166, 255, 0.25);
@@ -161,7 +171,7 @@
   &[aria-expanded="true"] {
     background: rgba(88, 166, 255, 0.08);
     border-color: rgba(88, 166, 255, 0.25);
-    color: #58a6ff;
+    color: #0078d4;
   }
 }
 
@@ -209,7 +219,7 @@
 
   &:focus {
     outline: none;
-    border-color: #58a6ff;
+    border-color: #0078d4;
     box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
     background: rgba(255, 255, 255, 0.06);
   }

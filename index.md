@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# Microsoft ISD \| AI Security Briefing
+# <iconify-icon icon="fluent-emoji-flat:shield" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Microsoft ISD \| AI Security Briefing
 {: .fs-9 }
 
 Highlighting the latest thinking on securing Generative and Agentic AI enterprise platforms and applications.
@@ -25,7 +25,7 @@ Highlighting the latest thinking on securing Generative and Agentic AI enterpris
 
 ---
 
-## What This Briefing Covers
+## <iconify-icon icon="fluent-emoji-flat:open-book" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> What This Briefing Covers
 
 | Section | Description |
 |:--------|:------------|

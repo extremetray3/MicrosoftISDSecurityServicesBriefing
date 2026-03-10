@@ -4,7 +4,7 @@ layout: default
 nav_order: 7
 ---
 
-# Enabling your AI Security Services Journey with Microsoft ISD Security
+# <iconify-icon icon="fluent-emoji-flat:rocket" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Enabling your AI Security Services Journey with Microsoft ISD Security
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,13 +16,13 @@ nav_order: 7
 
 ---
 
-## Introduction
+## <iconify-icon icon="fluent-emoji-flat:waving-hand" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Introduction
 
 Most organizations want to transform their business into a Frontier organization quickly, enabled by Microsoft AI platforms and security solutions. The challenge is understanding the emerging set of security considerations and control mechanisms along the way while investing in the business opportunity, often bringing together disparate parts of the organization (and numerous outside parties) in the process.
 
 ---
 
-## Getting Started
+## <iconify-icon icon="fluent-emoji-flat:footprints" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Getting Started
 
 To get you started on this journey, Microsoft ISD Security Services can help you:
 
@@ -40,7 +40,7 @@ Importantly, organizations that are further along in their AI security knowledge
 
 ---
 
-## Early-stage Envisioning
+## <iconify-icon icon="fluent-emoji-flat:crystal-ball" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Early-stage Envisioning
 
 Best for: early programs and leadership alignment.
 
@@ -50,7 +50,7 @@ Best for: early programs and leadership alignment.
 
 ---
 
-## Deeper-level Assessment
+## <iconify-icon icon="fluent-emoji-flat:microscope" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Deeper-level Assessment
 
 Best for: organizations wanting to assess current state for capability domains with the AI security superset relative to industry best practices and goals to hit within specified time frames.
 
@@ -62,7 +62,7 @@ Best for: organizations wanting to assess current state for capability domains w
 
 ---
 
-## Implementation Delivery
+## <iconify-icon icon="fluent-emoji-flat:package" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Implementation Delivery
 
 Best for: organizations ready to execute.
 

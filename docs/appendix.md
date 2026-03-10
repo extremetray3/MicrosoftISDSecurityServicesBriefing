@@ -4,7 +4,7 @@ layout: default
 nav_order: 9
 ---
 
-# Appendix — Microsoft AI and Security Technology Mapping
+# <iconify-icon icon="fluent-emoji-flat:card-file-box" width="36" height="36" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Appendix — Microsoft AI and Security Technology Mapping
 {: .no_toc }
 
 {: .note }
@@ -19,7 +19,7 @@ nav_order: 9
 
 ---
 
-## How to use this appendix
+## <iconify-icon icon="fluent-emoji-flat:open-book" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> How to use this appendix
 
 Microsoft's approach to AI security increasingly treats agents as first-class enterprise entities — requiring identity, governance, data protection, monitoring, and response capabilities that extend familiar Zero Trust and security operations patterns into the AI domain.
 
@@ -28,7 +28,7 @@ The mapping below illustrates how Microsoft platforms and security products can 
 {: .note }
 > Ownership varies by organization; the "Typical Owner" column is meant to clarify how these capabilities are usually operated across AI engineering, platform teams, security/compliance, and COE functions.
 
-## Key capabilities referenced
+## <iconify-icon icon="fluent-emoji-flat:puzzle-piece" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Key capabilities referenced
 
 - GenAI Platform & App Baseline Security
 - Agent Identity & Lifecycle Governance
@@ -42,9 +42,15 @@ The mapping below illustrates how Microsoft platforms and security products can 
 
 ---
 
-## Technology Mapping
+## <iconify-icon icon="fluent-emoji-flat:desktop-computer" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Technology Mapping
 
-<table>
+<table class="tech-mapping-table">
+<colgroup>
+  <col style="width: 18%;">
+  <col style="width: 34%;">
+  <col style="width: 34%;">
+  <col style="width: 14%;">
+</colgroup>
 <thead>
 <tr>
   <th>Product / Service</th>
