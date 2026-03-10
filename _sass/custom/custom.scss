@@ -20,6 +20,66 @@
   margin-bottom: 0.8rem;
 }
 
+// Key Questions cards (Executive Summary)
+.key-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.kq-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.1) 0%, rgba(0, 164, 239, 0.05) 100%);
+  border: 1px solid rgba(0, 120, 212, 0.25);
+  border-left: 3px solid #0078d4;
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: #00a4ef;
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.15) 0%, rgba(0, 164, 239, 0.08) 100%);
+  }
+}
+
+.kq-icon {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.kq-text {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+// Hero meta strip (Home page)
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+
+  strong {
+    color: #e0e0e0;
+  }
+}
+
 // Technology Mapping Table — wider capability column
 .tech-mapping-table {
   width: 100%;
