@@ -113,6 +113,7 @@
     container.innerHTML = '';
 
     DATA.forEach(function (group, gi) {
+      var l1Num = gi + 1;
       // L1 section
       var section = document.createElement('div');
       section.className = 'qs-l1-section';
@@ -123,7 +124,7 @@
       header.innerHTML =
         '<span class="qs-l1-chevron">▾</span>' +
         '<iconify-icon icon="' + group.icon + '" width="24" height="24" style="vertical-align:middle"></iconify-icon> ' +
-        '<span class="qs-l1-title">' + group.l1 + '</span>' +
+        '<span class="qs-l1-title">' + l1Num + '. ' + group.l1 + '</span>' +
         '<span class="qs-l1-badge">' + group.items.length + ' capabilities</span>';
 
       var body = document.createElement('div');
@@ -141,6 +142,7 @@
       group.items.forEach(function (item, ii) {
         var key = responseKey(gi, ii);
         var resp = state.responses[key] || { maturity: '', notes: '' };
+        var l2Num = l1Num + '.' + (ii + 1);
 
         var card = document.createElement('div');
         card.className = 'qs-card';
@@ -150,17 +152,20 @@
 
         card.innerHTML =
           '<div class="qs-card-header">' +
-            '<span class="qs-l2-label">' + item.l2 + '</span>' +
+            '<span class="qs-l2-label">' + l2Num + ' ' + item.l2 + '</span>' +
+          '</div>' +
+          '<p class="qs-question">' + item.q + '</p>' +
+          '<textarea class="qs-notes" data-key="' + key + '" placeholder="Discussion notes…" rows="2">' + escapeHtml(resp.notes) + '</textarea>' +
+          '<div class="qs-maturity-row">' +
+            '<label class="qs-maturity-label">Maturity:</label>' +
             '<select class="qs-maturity-select' + maturityClass + '" data-key="' + key + '">' +
-              '<option value="">— Select Maturity —</option>' +
+              '<option value="">— Select —</option>' +
               '<option value="Starting"' + (resp.maturity === 'Starting' ? ' selected' : '') + '>Starting</option>' +
               '<option value="Developing"' + (resp.maturity === 'Developing' ? ' selected' : '') + '>Developing</option>' +
               '<option value="Standardizing"' + (resp.maturity === 'Standardizing' ? ' selected' : '') + '>Standardizing</option>' +
               '<option value="Optimizing"' + (resp.maturity === 'Optimizing' ? ' selected' : '') + '>Optimizing</option>' +
             '</select>' +
-          '</div>' +
-          '<p class="qs-question">' + item.q + '</p>' +
-          '<textarea class="qs-notes" data-key="' + key + '" placeholder="Discussion notes…" rows="2">' + escapeHtml(resp.notes) + '</textarea>';
+          '</div>';
 
         body.appendChild(card);
       });
