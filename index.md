@@ -43,3 +43,4 @@ Highlighting the latest thinking on securing Generative and Agentic AI enterpris
 | <iconify-icon icon="fluent-emoji-flat:rocket" width="18" height="18" style="vertical-align:middle"></iconify-icon> [Enabling with Microsoft ISD]({{ site.baseurl }}/docs/enabling-with-isd) | How Microsoft ISD Security Services can help |
 | <iconify-icon icon="fluent-emoji-flat:check-mark-button" width="18" height="18" style="vertical-align:middle"></iconify-icon> [Conclusion]({{ site.baseurl }}/docs/conclusion) | Summary and path forward |
 | <iconify-icon icon="fluent-emoji-flat:card-file-box" width="18" height="18" style="vertical-align:middle"></iconify-icon> [Appendix]({{ site.baseurl }}/docs/appendix) | Microsoft AI and Security Technology Mapping |
+| <iconify-icon icon="fluent-emoji-flat:bar-chart" width="18" height="18" style="vertical-align:middle"></iconify-icon> [QuickScan Assessment]({{ site.baseurl }}/docs/quickscan) | Interactive AI security maturity assessment tool |

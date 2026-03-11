@@ -80,6 +80,231 @@
   }
 }
 
+// ===========================================
+// QuickScan Assessment
+// ===========================================
+
+.qs-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  margin: 0 0 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.qs-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qs-customer-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.qs-customer-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  width: 180px;
+
+  &:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.25);
+  }
+}
+
+// Progress bar
+.qs-progress-bar {
+  margin-bottom: 1.5rem;
+}
+
+.qs-progress-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.3rem;
+}
+
+.qs-progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.qs-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0078d4, #00a4ef);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+// L1 sections
+.qs-l1-section {
+  margin-bottom: 1.2rem;
+}
+
+.qs-l1-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.12) 0%, rgba(0, 164, 239, 0.06) 100%);
+  border: 1px solid rgba(0, 120, 212, 0.25);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: left;
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.18) 0%, rgba(0, 164, 239, 0.1) 100%);
+    border-color: rgba(0, 120, 212, 0.4);
+  }
+}
+
+.qs-l1-chevron {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 1rem;
+  text-align: center;
+}
+
+.qs-l1-title {
+  flex: 1;
+}
+
+.qs-l1-badge {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+
+.qs-l1-body {
+  padding: 0.6rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+// Capability cards
+.qs-card {
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.qs-card--assessed {
+  border-left-color: #0078d4;
+  background: rgba(0, 120, 212, 0.04);
+}
+
+.qs-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.qs-l2-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.qs-maturity-select {
+  appearance: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  min-width: 160px;
+
+  &:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.25);
+  }
+}
+
+// Maturity level colors
+.qs-sel-starting { color: #f85149; border-color: rgba(248, 81, 73, 0.4); }
+.qs-sel-developing { color: #d29922; border-color: rgba(210, 153, 34, 0.4); }
+.qs-sel-standardizing { color: #58a6ff; border-color: rgba(88, 166, 255, 0.4); }
+.qs-sel-optimizing { color: #3fb950; border-color: rgba(63, 185, 80, 0.4); }
+
+.qs-question {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0 0 0.6rem;
+  font-style: italic;
+}
+
+.qs-notes {
+  width: 100%;
+  min-height: 50px;
+  max-height: 200px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  resize: vertical;
+  display: block;
+
+  &:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+  }
+}
+
 // Technology Mapping Table — wider capability column
 .tech-mapping-table {
   width: 100%;
