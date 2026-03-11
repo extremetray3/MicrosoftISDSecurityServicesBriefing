@@ -6,6 +6,7 @@
 
   var STORAGE_KEY = 'qs-assessment';
   var SESSION_PREFIX = 'qs-session-';
+  var CUSTOMER_KEY = 'aisec-notes-customer';  // shared with notes panel
   var MATURITY_LEVELS = ['', 'Starting', 'Developing', 'Standardizing', 'Optimizing'];
 
   // Verbatim data from AISS_QuickScan — QuickScan B (60-min)
@@ -74,9 +75,16 @@
   DATA.forEach(function (g) { TOTAL += g.items.length; });
 
   // ---- State ----
-  var state = { customer: '', responses: {} };
+  var state = { responses: {} };
 
   function responseKey(gi, ii) { return gi + '-' + ii; }
+
+  function getCustomer() {
+    try { return localStorage.getItem(CUSTOMER_KEY) || ''; } catch (e) { return ''; }
+  }
+  function setCustomer(name) {
+    try { localStorage.setItem(CUSTOMER_KEY, name); } catch (e) { /* ignore */ }
+  }
 
   function loadState() {
     try {
@@ -86,7 +94,6 @@
   }
 
   function saveState() {
-    state.customer = document.getElementById('qs-customer-input').value;
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
     updateProgress();
   }
@@ -208,7 +215,7 @@
   // ---- Session Management ----
   function saveSession() {
     saveState();
-    var name = prompt('Session name:', state.customer || 'QuickScan ' + new Date().toLocaleDateString());
+    var name = prompt('Session name:', getCustomer() || 'QuickScan ' + new Date().toLocaleDateString());
     if (!name) return;
     try {
       localStorage.setItem(SESSION_PREFIX + name, JSON.stringify(state));
@@ -231,16 +238,16 @@
     var raw = localStorage.getItem(SESSION_PREFIX + name);
     if (!raw) { alert('Session "' + name + '" not found.'); return; }
     state = JSON.parse(raw);
-    document.getElementById('qs-customer-input').value = state.customer || '';
+    document.getElementById('qs-customer-input').value = getCustomer();
     render();
     updateProgress();
   }
 
   function newSession() {
     if (!confirm('Start a new assessment? Current unsaved data will be lost.')) return;
-    state = { customer: '', responses: {} };
+    state = { responses: {} };
     localStorage.removeItem(STORAGE_KEY);
-    document.getElementById('qs-customer-input').value = '';
+    document.getElementById('qs-customer-input').value = getCustomer();
     render();
     updateProgress();
   }
@@ -248,7 +255,7 @@
   function exportMarkdown() {
     saveState();
     var lines = [];
-    var customer = state.customer || 'Unknown';
+    var customer = getCustomer() || 'Unknown Customer';
     lines.push('# AI Security Maturity QuickScan — ' + customer);
     lines.push('');
     lines.push('**Date:** ' + new Date().toLocaleDateString());
@@ -310,8 +317,10 @@
     loadState();
     var custInput = document.getElementById('qs-customer-input');
     if (custInput) {
-      custInput.value = state.customer || '';
-      custInput.addEventListener('input', function () { saveState(); });
+      custInput.value = getCustomer();
+      custInput.addEventListener('input', function () {
+        setCustomer(custInput.value);
+      });
     }
     render();
     updateProgress();
