@@ -67,6 +67,11 @@ Partial listing — refer to other materials for in-depth exploration.
 
 - Secure supply chain posture for models/tools/connectors
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide283.png" alt="Threat Modeling Framework — 5-step process: System Analysis, Threats Identification, Mitigations Identification, Selection & Prioritization, Continuous Monitoring" class="slide-img">
+  <figcaption>Threat Modeling Framework: structured 5-step process from system analysis to continuous monitoring (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 ---
 
 ## <iconify-icon icon="fluent-emoji-flat:construction" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Phase 4 — Implement Priority Controls

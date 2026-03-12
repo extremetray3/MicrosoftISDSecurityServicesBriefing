@@ -20,6 +20,11 @@ nav_order: 2
 
 ### The Shift from Generative to Agentic AI
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide2.png" alt="What is an agent — architecture showing LLM, tools, memory, and input/output flow" class="slide-img">
+  <figcaption>Agent architecture: LLM core with tools, memory, and orchestration (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 Enterprises are rapidly evolving from ***AI that generates*** to ***AI that acts***: autonomous agents that plan, call tools, retrieve data, write back to systems of record, and delegate to other agents. This shift changes the security problem from foundational GenAI security to **workforce governance for digital workers** that operate at machine speed, at scale, and across many systems at once.
 
 The core challenge now extends from whether an AI model can produce a harmful answer to whether an agent can **take a harmful action** (or chain of actions) and whether the organization can prove it remained in control.

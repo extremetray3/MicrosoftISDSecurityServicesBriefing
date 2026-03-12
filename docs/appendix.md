@@ -23,6 +23,11 @@ nav_order: 9
 
 Microsoft's approach to AI security increasingly treats agents as first-class enterprise entities — requiring identity, governance, data protection, monitoring, and response capabilities that extend familiar Zero Trust and security operations patterns into the AI domain.
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide75.png" alt="End-to-end security for AI transformation — Microsoft Entra, Defender, Sentinel, Intune, Purview product lineup" class="slide-img">
+  <figcaption>End-to-end security for AI transformation: Microsoft security product lineup (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 The mapping below illustrates how Microsoft platforms and security products can be combined (including select Preview capabilities) to implement the control themes described in this briefing.
 
 {: .note }

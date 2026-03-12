@@ -51,6 +51,11 @@ SecOps needs:
 
 In many AI transformation programs, security cannot succeed as a "project-only" workstream. It needs an operational home that persists across use cases, teams, and releases. That home is typically an **AI Center of Excellence (AI COE)** (sometimes called an AI Factory operating model), which coordinates cross-functional decision-making, standards, platform practices, and scaled enablement across the AI portfolio.
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide23.png" alt="AI Operations Model — Control Tower with Platform Pods for Data, DevOps, GenAI Ops, App & Infra" class="slide-img">
+  <figcaption>AI Operations Model: Control Tower coordinating platform pods (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 In this context, AI security works best when it **plugs into the broader AI COE** — not necessarily through deep technical integration, but through shared governance, intake, controls, and operational processes.
 
 ### Operational integration

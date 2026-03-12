@@ -20,6 +20,11 @@ nav_order: 7
 
 Most organizations want to transform their business into a Frontier organization quickly, enabled by Microsoft AI platforms and security solutions. The challenge is understanding the emerging set of security considerations and control mechanisms along the way while investing in the business opportunity, often bringing together disparate parts of the organization (and numerous outside parties) in the process.
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide275.png" alt="Security and AI Services — coverage model showing Security for AI and AI for Security modalities" class="slide-img">
+  <figcaption>Microsoft ISD Security Services for AI: coverage model, modalities, and evolving tools & frameworks (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 ---
 
 ## <iconify-icon icon="fluent-emoji-flat:footprints" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> Getting Started

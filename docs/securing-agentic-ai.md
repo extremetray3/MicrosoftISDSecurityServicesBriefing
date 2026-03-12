@@ -56,6 +56,11 @@ This is why agent security is best understood as **governance + identity + obser
 
 There are many possible threat taxonomies. The most useful executive view is to group risks into a few practical buckets that map directly to controls and operating model decisions.
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide62.png" alt="AI threat landscape evolving across layers — AI usage, AI solutions, AI platform" class="slide-img">
+  <figcaption>AI threat landscape evolving across usage, solution, and platform layers (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 ### Identity & privilege risks (agents as non‑human principals)
 
 - Agents operate with credentials and tokens; broad scopes create "excessive agency."
@@ -171,6 +176,11 @@ These principles help translate "secure agentic AI" into implementable architect
 ## <iconify-icon icon="fluent-emoji-flat:building-construction" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"></iconify-icon> 2.4 Control Primitives That Matter
 
 Many organizations jump to "monitoring" or "red teaming" first. In practice, durable security starts with a small number of control primitives that create enterprise leverage.
+
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide66.png" alt="Agent Controls Model — three governance zones: citizen, partnered, and professional development" class="slide-img">
+  <figcaption>Agent Controls Model: governance zones from citizen to professional development (Microsoft AI Security Master Deck)</figcaption>
+</figure>
 
 ### Agent inventory, ownership, and lifecycle governance
 

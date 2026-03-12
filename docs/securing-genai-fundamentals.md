@@ -23,6 +23,11 @@ Establishing a baseline for securing generative AI solutions — these remain wi
 
 Establishing a baseline for generative AI security — these solutions remain widely deployed and are the foundation agentic systems build upon.
 
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide34.png" alt="AI creating new attack surfaces across prompts, data, plug-ins, models, and agents" class="slide-img">
+  <figcaption>AI extends the attack surface across prompts, orchestration, plug-ins, models, and agents (Microsoft AI Security Master Deck)</figcaption>
+</figure>
+
 ### Data exposure and leakage
 
 Sensitive data entering prompts, being retrieved into context, or emitted in outputs (including accidental cross-tenant or cross-user exposure when access boundaries are weak).
@@ -66,6 +71,11 @@ Enterprise programs have converged on several control themes and frameworks (par
 - Operational evidence model (logging, monitoring, incident response, audit readiness)
 
 ### Frameworks and standards
+
+<figure class="slide-figure">
+  <img src="{{ site.baseurl }}/assets/images/slides/slide22.png" alt="NIST AI Risk Management Framework — lifecycle from Govern through Map, Measure, and Manage" class="slide-img">
+  <figcaption>NIST AI Risk Management Framework applied to AI security lifecycle (Microsoft AI Security Master Deck)</figcaption>
+</figure>
 
 - CIS Critical Security Controls (CIS Controls)
 
