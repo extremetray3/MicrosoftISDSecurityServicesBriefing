@@ -341,6 +341,513 @@
 }
 
 // ============================================
+// Capability Mapping — Dot-Matrix Page
+// ============================================
+
+// ── Toolbar with toggle buttons ──
+.cm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.cm-view-btn {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &--active {
+    background: rgba(0, 120, 212, 0.2);
+    border-color: #0078d4;
+    color: #58a6ff;
+    box-shadow: 0 0 6px rgba(0, 120, 212, 0.3);
+  }
+}
+
+.cm-export-btn {
+  margin-left: 0.3rem;
+  background: rgba(63, 185, 80, 0.12);
+  border-color: rgba(63, 185, 80, 0.35);
+  color: #3fb950;
+
+  &:hover {
+    background: rgba(63, 185, 80, 0.22);
+    color: #56d364;
+  }
+}
+
+.cm-toolbar-tip {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+
+  .cm-flip-icon { color: #0078d4; font-size: 1rem; }
+}
+
+// Filter input in toolbar
+.cm-filter-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.6rem;
+}
+
+.cm-filter-icon {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cm-filter-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.78rem;
+  width: 160px;
+
+  &:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.25);
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+}
+
+// Sort indicators & sortable headers
+.cm-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: filter 0.15s;
+
+  &:hover {
+    filter: brightness(1.3);
+
+    .cm-th-label {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.cm-sort-arrow {
+  font-size: 0.85rem;
+  vertical-align: middle;
+  margin-left: 0.1rem;
+}
+
+.cm-sort-none {
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cm-sort-active {
+  color: #58a6ff;
+  opacity: 1;
+  font-weight: 700;
+}
+
+// Empty state
+.cm-empty-msg {
+  text-align: center;
+  padding: 1.5rem 0 !important;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+// Sort hint in group header
+.cm-sort-hint {
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 0.6rem;
+}
+
+// ── Notes column ──
+.cm-td-notes {
+  vertical-align: top;
+  padding: 0.2rem 0.25rem !important;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+// ── Select column ──
+.cm-gh-select {
+  text-align: center;
+  vertical-align: bottom;
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  padding-bottom: 0.4rem !important;
+}
+
+.cm-td-select {
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  padding: 0 !important;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #1b1f23;
+}
+
+.cm-select-all,
+.cm-row-checkbox {
+  cursor: pointer;
+  accent-color: #0078d4;
+}
+
+.cm-notes-input {
+  width: 100%;
+  min-height: 36px;
+  max-height: 100px;
+  padding: 0.25rem 0.3rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 0.65rem;
+  line-height: 1.35;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 1px rgba(0, 120, 212, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-style: italic;
+  }
+}
+
+// ── Learn column ──
+.cm-td-learn {
+  text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cm-learn-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// ── Scrollable wrapper ──
+.cm-table-wrap {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 0;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+// ── Matrix table ──
+.cm-matrix {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 0.8rem;
+  min-width: 0;
+}
+
+.cm-cg-select  { width: 30px; }
+.cm-cg-product { width: 180px; }
+.cm-cg-dot     { width: 84px; }
+.cm-cg-notes   { width: 170px; }
+.cm-cg-learn   { width: 44px; }
+
+// ── Sticky thead ──
+.cm-matrix thead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+// Opaque backgrounds so scrolled rows don't bleed through
+.cm-matrix thead th {
+  background: #1b1f23 !important;
+}
+.cm-matrix thead .cm-gh-owner,
+.cm-matrix thead .cm-th-owner {
+  background: #172028 !important;
+}
+.cm-matrix thead .cm-gh-cap,
+.cm-matrix thead .cm-th-cap {
+  background: #231e1a !important;
+}
+
+// ── Group header row ──
+.cm-group-header-row {
+  .cm-gh {
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.45rem 0.2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  }
+  .cm-gh-select {
+    position: sticky;
+    left: 0;
+    z-index: 7;
+    background: #1b1f23 !important;
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+  }
+  .cm-gh-product {
+    background: #1b1f23;
+    border-right: 3px solid rgba(88, 166, 255, 0.4);
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    position: sticky;
+    left: 30px;
+    z-index: 6;
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0 0 0.4rem 0.5rem;
+  }
+  .cm-gh-owner {
+    background: rgba(0, 180, 220, 0.12);
+    color: #00d4ff;
+  }
+  .cm-gh-cap {
+    background: rgba(240, 136, 62, 0.12);
+    color: #f0883e;
+  }
+  .cm-gh-extra {
+    background: #1b1f23 !important;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.68rem;
+    vertical-align: bottom;
+    padding: 0 0.3rem 0.4rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+// ── Rotated column headers ──
+.cm-th-rot {
+  height: 160px;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  vertical-align: bottom;
+  text-align: left;
+  padding: 0 0 0.4rem 0;
+  position: relative;  // needed for z-index stacking
+  overflow: visible;
+}
+
+.cm-th-owner { background: rgba(0, 180, 220, 0.06); }
+.cm-th-cap   { background: rgba(240, 136, 62, 0.06); }
+
+.cm-th-label {
+  display: block;
+  transform: rotate(-55deg);
+  transform-origin: bottom left;
+  position: absolute;
+  bottom: 0.4rem;
+  left: 50%;
+  white-space: nowrap;
+  overflow: visible;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cm-th-owner .cm-th-label { color: #00d4ff; }
+.cm-th-cap   .cm-th-label { color: #f0883e; }
+
+// ── Product cell (sticky col 1) ──
+.cm-td-product {
+  position: sticky;
+  left: 30px;
+  z-index: 2;
+  background: #1b1f23;
+  border-right: 3px solid rgba(88, 166, 255, 0.4);
+  padding: 0.15rem 0.25rem;
+  vertical-align: middle;
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+// Push first dot column away from product border
+.cm-gh-product + .cm-gh-cap,
+.cm-gh-product + .cm-gh-owner {
+  padding-left: 16px !important;
+}
+.cm-matrix tbody td.cm-td-dot:first-of-type {
+  padding-left: 8px !important;
+}
+
+// ── Flip card ──
+.cm-flip-card {
+  perspective: 600px;
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+  outline: none;
+
+  &:focus-visible .cm-flip-inner {
+    box-shadow: 0 0 0 2px #0078d4;
+  }
+}
+
+.cm-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+}
+
+.cm-flip-card.flipped .cm-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.cm-flip-front,
+.cm-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cm-flip-front {
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.18) 0%, rgba(0, 164, 239, 0.06) 100%);
+  border: 1px solid rgba(0, 120, 212, 0.35);
+}
+
+.cm-flip-name {
+  font-weight: 600;
+  font-size: 0.68rem;
+  line-height: 1.25;
+  color: #e0e0e0;
+}
+
+.cm-flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, rgba(63, 185, 80, 0.12) 0%, rgba(0, 164, 239, 0.06) 100%);
+  border: 1px solid rgba(63, 185, 80, 0.3);
+  overflow-y: auto;
+}
+
+.cm-flip-desc {
+  font-size: 0.6rem;
+  line-height: 1.3;
+  color: #c0c0c0;
+}
+
+// ── Dot cells ──
+.cm-td-dot {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  width: 84px;
+  min-width: 84px;
+  max-width: 84px;
+  background: rgba(255, 255, 255, 0.04);  // light grey default for empty cells
+}
+
+// Cells with a dot get a darker/cleaner background
+.cm-td-dot--filled {
+  background: transparent;
+}
+
+.cm-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.cm-dot-owner {
+  background: #00d4ff;
+  box-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+}
+
+.cm-dot-cap {
+  background: #f0883e;
+  box-shadow: 0 0 5px rgba(240, 136, 62, 0.5);
+}
+
+// ── Zebra stripes ──
+.cm-matrix tbody tr:nth-child(even) {
+  .cm-td-dot { background: rgba(255, 255, 255, 0.06); }
+  .cm-td-dot--filled { background: rgba(255, 255, 255, 0.02); }
+  .cm-td-product { background: #1e2226; }
+  .cm-td-select  { background: #1e2226; }
+}
+
+.cm-matrix tbody tr:hover {
+  .cm-td-dot { background: rgba(255, 255, 255, 0.09); }
+  .cm-td-dot--filled { background: rgba(255, 255, 255, 0.05); }
+  .cm-td-product { background: #242930; }
+  .cm-td-select  { background: #242930; }
+}
+
+// ── Table cell resets ──
+.cm-matrix th,
+.cm-matrix td {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  min-width: 0 !important;
+  border-left: 0;
+}
+
+// ============================================
 // Slide Figures — deck visuals embedded in pages
 // ============================================
 
